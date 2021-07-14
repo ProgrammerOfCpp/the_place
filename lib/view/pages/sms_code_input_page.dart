@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:the_place/view/pages/user_page.dart';
+import '../widgets/app_scaffold.dart';
 
 class SmsCodeInputPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       body: Center(
         child: Column(
           children: [
@@ -17,7 +18,7 @@ class SmsCodeInputPage extends StatelessWidget {
               onChanged: (value) => {},
             ),
             TextButton(
-              onPressed: () => Get.to(UserPage()),
+              onPressed: () => Get.off(UserPage()),
               child: Text('ok'.tr),
             ),
           ],
